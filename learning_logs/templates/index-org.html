@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main class="" role="main">
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">Learning Log helps you keep track of you learning, for any topic you're learning about.</p>
+            <hr class="my-4">
+            <p>This a example project based in the project of PYTHON CRASH COURSE, by Eric Matthes.</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'learning_logs:topics' %}" role="button">Learn more</a>
+        </div>
+        {#<p>Learning Log helps you keep track of you learning, for any topic you're learning about.</p>#}
+    </main>
+{% endblock content %}
