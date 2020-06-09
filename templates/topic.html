@@ -3,20 +3,29 @@
     <div class="row" style="width: ">
         <ul class="nav">
             <li class="nav-item">
-                <h1 style="font-family: monospace, Monaco, Courier">Topic: [{{ topic }}]</h1>
+                <h2 style="font-family: monospace, Monaco, Courier">Topic: [{{ topic }}]</h2>
+            </li>
+    </ul>
+           <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="btn btn-primary" style="align-items: last" href="{% url 'learning_logs:new_entry' topic.id %}">Add a new entry</a>
             </li>
     </ul>
     </div>
 {% endblock page_header %}
 
 {% block content %}
-    <p>Entries:</p>
-    <p>
-        <a href="{% url 'learning_logs:new_entry' topic.id %}">Add a new entry</a>
-    </p>
+
+<!--    <h3>Topic: [{{ topic }}]</h3>-->
+
+<!--    <p>Entries:</p>-->
+<!--    <p>-->
+<!--        <a href="{% url 'learning_logs:new_entry' topic.id %}">Add a new entry</a>-->
+<!--    </p>-->
     <ul>
 
         {% for entry in entries %}
+        <ul class="list-group" style="margin-top: 3%">
             {#            <div class="container">#}
             {#            <div class="row">#}
             <div class="col-6">
